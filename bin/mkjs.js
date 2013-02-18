@@ -25,7 +25,7 @@ eqeqeq:true immed:true undef:true unused:true latedef:true */
     }
   }
 
-  filedata = mkjs(config, filepath);
+  filedata = mkjs.create(config, filepath);
 
   filepath = path.resolve(process.cwd(), filepath);
   if (fs.existsSync(filepath)) {

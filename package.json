@@ -1,0 +1,24 @@
+{
+  "name": "mkjs",
+  "version": "1.0.0",
+  "description": "Create a JavaScript file with the IIFE and JSHint boilerplate.",
+  "main": "lib/index",
+  "bin": {
+    "mkjs": "bin/mkjs.js"
+  },
+  "scripts": {
+    "test": "node bin/mkjs /tmp/madejs.js && node /tmp/madejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/mkjs.git"
+  },
+  "keywords": [
+    "iife",
+    "jshint",
+    "boilerplate"
+  ],
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com)",
+  "license": "MIT",
+  "gitHead": "4ef2668efa28c39fe3c477c0626ec35a4a802919"
+}
