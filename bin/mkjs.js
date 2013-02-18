@@ -1,4 +1,4 @@
-#!/usr/bin/env node --use_strict
+#!/usr/bin/env node
 /*jshint node:true es5:true browser:true jquery:true
 onevar:true indent:2 laxcomma:true laxbreak:true
 eqeqeq:true immed:true undef:true unused:true latedef:true */

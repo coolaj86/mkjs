@@ -1,6 +1,6 @@
 {
   "name": "mkjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a JavaScript file with the IIFE and JSHint boilerplate.",
   "main": "lib/index",
   "bin": {
