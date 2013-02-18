@@ -1,6 +1,10 @@
 Usage
 ===
 
+Install
+
+    npm install -g --force mkjs || sudo npm install -g --force mkjs
+
 Creates a file with IIFE and JSHint boilerplate.
 
     mkjs /tmp/hello.js
