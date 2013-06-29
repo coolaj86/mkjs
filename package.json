@@ -1,10 +1,11 @@
 {
   "name": "mkjs",
-  "version": "1.0.1",
-  "description": "Create a JavaScript file with the IIFE and JSHint boilerplate.",
-  "main": "lib/index",
+  "version": "1.1.0",
+  "description": "Create a JavaScript file with the IIFE / 'use strict'; boilerplate.",
+  "main": "lib/mkjq",
   "bin": {
-    "mkjs": "bin/mkjs.js"
+    "mkjs": "bin/mkjs.js",
+    "mkjq": "bin/mkjs.js"
   },
   "scripts": {
     "test": "node bin/mkjs /tmp/madejs.js && node /tmp/madejs"

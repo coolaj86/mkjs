@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-/*jshint node:true es5:true browser:true jquery:true
-onevar:true indent:2 laxcomma:true laxbreak:true
-eqeqeq:true immed:true undef:true unused:true latedef:true */
 (function () {
   "use strict";
 
@@ -9,11 +6,25 @@ eqeqeq:true immed:true undef:true unused:true latedef:true */
     , fs = require('fs')
     , path = require('path')
     , home = process.env[/^win/.test(process.platform) ? 'USERPROFILE' : 'HOME']
-    , mkjs = require('../lib/index')
+    , mkjs = require('../lib/mkjs')
     , rcPath = path.join(home, '.mkjsrc.js')
+    , hintPath = path.join(home, '.jshintrc')
+    , binName = process.argv[1]
     , config
     , filedata
     ;
+
+  if (!fs.existsSync(hintPath)) {
+    try {
+      fs.writeFileSync(
+          fs.readFileSync(path.join(__dirname, '..', 'lib', 'jshintrc'), 'utf8')
+        , hintPath
+        , 'utf8'
+      );
+    } catch(e) {
+      console.warn("Could not write ~/.jshintrc");
+    }
+  }
 
   if (fs.existsSync(rcPath)) {
     try {
@@ -25,6 +36,11 @@ eqeqeq:true immed:true undef:true unused:true latedef:true */
     }
   }
 
+  config = config || {};
+
+  if (/mkjq/.test(binName)) {
+    config.jQuery = true;
+  }
   filedata = mkjs.create(config, filepath);
 
   filepath = path.resolve(process.cwd(), filepath);
