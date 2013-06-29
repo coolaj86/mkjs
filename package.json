@@ -1,8 +1,8 @@
 {
   "name": "mkjs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create a JavaScript file with the IIFE / 'use strict'; boilerplate.",
-  "main": "lib/mkjq",
+  "main": "lib/mkjs",
   "bin": {
     "mkjs": "bin/mkjs.js",
     "mkjq": "bin/mkjs.js"
@@ -19,6 +19,8 @@
     "jshint",
     "boilerplate"
   ],
+  "dependencies": {},
+  "devDependencies": {},
   "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com)",
   "license": "MIT",
   "gitHead": "4ef2668efa28c39fe3c477c0626ec35a4a802919"
